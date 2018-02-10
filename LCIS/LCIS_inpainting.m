@@ -1,9 +1,8 @@
 %-----------------------------------------------------------------------
 %  LCIS inpainting described in ------------------------------------------
-%  Unconditionally stable schemes for higher order inpainting by Bertozzi ---
 %  this program is designed for LCIS image inpainting reconstruction
 %  this program is only used for black - white images
-
+%  Yufan Luo - 2016/7/5
 
 %  inputs
 %  I_sample        - sampled image (the size should be n*m)
