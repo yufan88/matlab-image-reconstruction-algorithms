@@ -15,6 +15,8 @@
 %  output
 %  reconsturctionresult  -  reconstruction (with size n^2)
 
+% YUFAN LUO 2016/7/5
+
 
 function [ reconsturctionresult ] = TVinpainting( I_sample, pixelifsampled, maxiter )
 
