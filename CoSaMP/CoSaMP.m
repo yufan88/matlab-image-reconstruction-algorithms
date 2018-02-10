@@ -1,3 +1,12 @@
+ % output Ir --- reconstructed image
+ % input I_sample -- N\times N undersampled image
+ % input pixelifsampled -- N\times N mask
+ % numCofficients -- total number of recontructed coefficients
+ % maxiter -- maxmium iterations
+ 
+ %YUFAN LUO 2016/7/5
+ 
+ 
  function [ Ir ] = CoSaMP( I_sample,pixelifsampled,numCofficients,maxiter)
  
  
