@@ -10,7 +10,7 @@ Following algorithms are contained in this folder:
  
 4. CoSaMP algorithm description(http://statweb.stanford.edu/~dneedell/papers/cosamp.pdf).
  
-5. BP algorithm, please visit http://users.ece.gatech.edu/justin/l1magic/  (l1 magic) for the code and user guide.
+5. BP algorithm, visit http://users.ece.gatech.edu/justin/l1magic/  (l1 magic) for user guide.
 
 
 
