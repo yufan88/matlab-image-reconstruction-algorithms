@@ -12,6 +12,8 @@ Following algorithms are contained in this folder:
  
 5. BP algorithm, visit https://statweb.stanford.edu/~candes/l1magic/  (l1 magic) for user guide.
 
+6. Dalaunay inpainting, visit https://en.wikipedia.org/wiki/Delaunay_triangulation
+
 
 
 
