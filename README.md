@@ -1,5 +1,7 @@
 # MATLAB reconstruction algorithms for undersampled AFM images
 
+You may use, share, or modify this file freely. You are welcome to contact luoyuf@bu.edu
+
 Following algorithms are contained in this folder:
 
 1. LCIS Algorithm description (http://www.math.ucla.edu/~bertozzi/papers/CMS11.pdf).
