@@ -16,6 +16,7 @@ Following algorithms are contained in this folder:
 
 6. Dalaunay inpainting, visit https://en.wikipedia.org/wiki/Delaunay_triangulation
 
+7. Mu path reconstruction with vertical penalty, visit ftp://ftp.math.ucla.edu/pub/camreport/cam08-29.pdf
 
 
 
