@@ -1,9 +1,9 @@
-function [Ir] = BregmanSplitwithVerticalPenalty(I,E,mu,lmda,r,maxiter,tol)
+function [Ir] = BregmanSplitwithVerticalPenalty_Anisotropic(I,E,weight,mu,lmda,r,maxiter,tol)
 
     % input
     % BregmanSplitwithVerticalPenalty is used to solve the following
     % problem:
-    % min |\Psi x|_1 + \mu/2*|x|_TV{vertical}  s.t. ||\Phi x - y||_2 < \sigma
+    % min |\Psi x|_1 + weight/2*|x|_TV{vertical}  s.t. ||\Phi x - y||_2 < \sigma
     % I - sampled image with size n*m
     % E - sample matrix with size n*m, 1 if sampled, 0 otherwise
     % lmda and r and tuning vaiables - they are turned out to be very
@@ -42,6 +42,8 @@ function [Ir] = BregmanSplitwithVerticalPenalty(I,E,mu,lmda,r,maxiter,tol)
         B(i,i+n) = -1;
     end
 
+    B = B*weight;
+
 
     A = sparse(n^2,n^2);
 
@@ -49,6 +51,8 @@ function [Ir] = BregmanSplitwithVerticalPenalty(I,E,mu,lmda,r,maxiter,tol)
         A(i,i) = 1;
         A(i,i+n) = -1;
     end
+
+    A = A*weight;
 
     A = A'*A*lmda;
 
@@ -67,6 +71,8 @@ function [Ir] = BregmanSplitwithVerticalPenalty(I,E,mu,lmda,r,maxiter,tol)
     u_next = u_current;
     current_observation = y + 1;
     f = y;
+	
+save([pwd '/Ir.mat'],'E','-v7.3');
 
     while(norm(current_observation-y) > tol)
 
@@ -105,9 +111,9 @@ function [Ir] = BregmanSplitwithVerticalPenalty(I,E,mu,lmda,r,maxiter,tol)
 
         f = f + y - current_observation;
         
-        Ir = u_next;
+        Ir = PixelVectorToMatrix(u_next, [n m]);
 
-        save([pwd '/Ir.mat'],'Ir','-v7.3');
+        save([pwd '/Ir.mat'],'Ir','E','-v7.3');
 
     end
 
